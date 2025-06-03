@@ -47,18 +47,22 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div>
-        <h1>Lista de usuários</h1>
-        <Create adicionarUsuario={() => adicionarUsuario} />
-        <hr />
-      </div>
+    <div className="App mt-5">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 mb-5">
+            <Create adicionarUsuario={() => adicionarUsuario} />
+          </div>
 
-      <List
-        usuarios={usuarios}
-        removerUsuario={() => removerUsuario}
-        atualizarUsuario={() => atualizarUsuario}
-      />
+          <div className="col-12">
+            <List
+              usuarios={usuarios}
+              removerUsuario={() => removerUsuario}
+              atualizarUsuario={() => atualizarUsuario}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
